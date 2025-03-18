@@ -1,0 +1,51 @@
+.container-not-found {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.not-found-title {
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+}
+
+.container-not-found button {
+    background-color: black;
+    width: 300px;
+    color: white;
+    padding: 8px;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s ease-in-out;
+}
+
+.container-not-found button:hover {
+    box-shadow: 0 0 10px black;
+}
+
+
+
+
+@media (max-width: 600px) {
+
+    .container-not-found {
+        padding: 10px;
+    }
+
+    .not-found-title {
+        font-size: 1.25rem;
+        margin-bottom: 20px;
+    }
+
+    .container-not-found button {
+        width: 250px;
+        font-size: 1.25rem;
+    }
+
+}

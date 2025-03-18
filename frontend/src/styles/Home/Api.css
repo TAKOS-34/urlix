@@ -1,0 +1,158 @@
+.container-api {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    padding: 20px;
+}
+
+.container-api .container-api-content {
+    word-break: break-word;
+    width: 90vw;
+}
+
+.container-api .api-title {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.container-api .introduction {
+    font-size: 1.25rem;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+.container-api .api-nav {
+    margin-bottom: 40px;
+}
+
+.container-api .api-nav .api-nav-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.container-api .api-nav .api-nav-list li {
+    margin: 0 0 15px 20px;
+    list-style: square;
+}
+
+.container-api .api-nav a {
+    font-size: 1.1rem;
+    color: black;
+}
+
+.container-api .api-nav a:hover {
+    font-weight: 700;
+}
+
+.container-api .container-endpoints {
+    margin-bottom: 40px;
+}
+
+.container-api .container-endpoints .endpoints-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.container-api .container-endpoints .endpoints-descriptor {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.container-api .container-endpoints .endpoints-url {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.container-api .container-endpoints .endpoints-rules {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.container-api .container-endpoints .endpoints-responses {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.container-api .container-endpoints .endpoints-examples {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.container-api .container-endpoints .label-language-selector {
+    margin-right: 10px;
+}
+
+.container-api .container-endpoints #language-selector {
+    padding: 6px 12px;
+    border-radius: 4px;
+    background-color: #282A36;
+    color: white;
+    margin: 10px 0;
+}
+
+.container-api .container-endpoints .endpoints-subtitle {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.container-api .container-endpoints .code-snippet {
+    margin-top: 5px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+
+@media (max-width: 500px) {
+
+    .container-api {
+        padding: 20px 10px;
+    }
+
+    .container-api .api-title {
+        font-size: 2rem;
+    }
+
+    .container-api .introduction {
+        font-size: 1rem;
+    }
+
+    .container-api .api-nav .api-nav-title {
+        font-size: 1.25rem;
+    }
+
+    .container-api .api-nav a {
+        font-size: 0.8rem;
+    }
+
+    .container-api .container-endpoints .endpoints-title {
+        font-size: 1.25rem;
+    }
+    
+    .container-api .container-endpoints .endpoints-descriptor {
+        font-size: 0.8rem;
+    }
+    
+    .container-api .container-endpoints .endpoints-url {
+        font-size: 0.8rem;
+    }
+    
+    .container-api .container-endpoints .endpoints-rules {
+        font-size: 0.8rem;
+    }
+    
+    .container-api .container-endpoints .endpoints-responses {
+        font-size: 0.8rem;
+    }
+    
+    .container-api .container-endpoints .endpoints-examples {
+        font-size: 0.8rem;
+    }
+
+}

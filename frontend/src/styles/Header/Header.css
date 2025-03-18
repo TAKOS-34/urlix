@@ -1,0 +1,144 @@
+.header {
+    width: 100%;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar-div {
+    position: relative;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar li {
+    margin: 0 20px;
+}
+
+.navbar a {
+    position: relative;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .separator-icon {
+    background-color: white;
+    height: 19px;
+    width: 1px;
+    margin: 0 10px;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 115%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+.navbar img {
+    margin-right: 6px;
+    width: 16px;
+    height: 16px;
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+
+
+
+
+@media (max-width: 1000px) {
+    .navbar {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: flex;
+        cursor: pointer;
+        margin-right: 6px;
+        width: 32px;
+        height: 32px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar.open {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 0;
+        width: 200px;
+        background-color: black;
+        padding: 5px;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 0 3px black;
+        z-index: 500;
+        animation: mobile-menu-animation 0.3s forwards;
+    }
+
+    .mobile-menu-icon.hamburger-icon {
+        transform: rotate(0deg);
+    }
+
+    .mobile-menu-icon.cross-icon {
+        height: 28px;
+        width: 28px;
+        transform: rotate(180deg);
+    }
+
+    .navbar.open ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar.open img {
+        height: 22px;
+        width: 22px;
+        margin-right: 10px;
+    }
+
+    .navbar.open li {
+        margin: 10px 0;
+        font-size: 1.5rem;
+    }
+
+    .navbar.open a {
+        margin: 0;
+    }
+
+    .navbar.open .separator-icon {
+        display: none;
+    }
+
+    @keyframes mobile-menu-animation {
+        from {
+            top: -25%;
+            opacity: 0;
+        } to {
+            top: 50px;
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,124 @@
+.container-delete {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.container-delete .container-navigator {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.container-delete .separator {
+    border: 1px solid black;
+    margin-bottom: 40px;
+}
+
+.container-delete .container-navigator .link-list a {
+    font-weight: 700;
+    color: black;
+    cursor: pointer;
+}
+
+.container-delete .container-navigator .link-list a:hover {
+    font-weight: 900;
+}
+
+.container-delete .container-navigator .switch-list a {
+    color: black;
+    cursor: pointer;
+}
+
+.container-delete .container-navigator .switch-list a:hover {
+    font-weight: 700;
+}
+
+.container-delete .container-delete-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container-delete .delete-descriptor {
+    font-size: 1.25rem;
+    flex-wrap: wrap;
+    word-break: break-all;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.container-delete span {
+    font-weight: 700;
+}
+
+.container-delete .delete-btn button {
+    width: 80px;
+    color: white;
+    padding: 8px 0;
+    font-size: 1.25rem;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s ease-in-out;
+}
+
+.container-update .delete-btn button:hover {
+    box-shadow: 0 0 8px black;
+}
+
+.container-delete .delete-btn .yes-btn {
+    background-color: red;
+    margin-right: 20px;
+}
+
+.container-delete .delete-btn .no-btn {
+    background-color: black;
+}
+
+
+
+
+
+@media (max-width: 1000px) {
+
+    .container-delete {
+        width: 90vw;
+    }
+
+    .container-delete .container-navigator {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .container-delete .container-navigator .link-list {
+        margin-bottom: 10px;
+    }
+
+    .container-delete .container-navigator {
+        margin-bottom: 20px;
+    }
+
+    .container-delete .separator {
+        margin-bottom: 20px;
+    }
+
+    .container-delete .delete-descriptor {
+        font-size: 1.1rem;
+        margin-bottom: 50px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .container-delete {
+        padding: 20px 10px;
+    }
+
+}

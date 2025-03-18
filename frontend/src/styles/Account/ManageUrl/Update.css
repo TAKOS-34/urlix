@@ -1,0 +1,160 @@
+.container-update {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.container-update .container-navigator {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.container-update .separator {
+    border: 1px solid black;
+    margin-bottom: 40px;
+}
+
+.container-update .container-navigator .link-list a {
+    font-weight: 700;
+    color: black;
+    cursor: pointer;
+}
+
+.container-update .container-navigator .link-list a:hover {
+    font-weight: 900;
+}
+
+.container-update .container-navigator .switch-list a {
+    color: black;
+    cursor: pointer;
+}
+
+.container-update .container-navigator .switch-list a:hover {
+    font-weight: 700;
+}
+
+.container-update .container-update-form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-update .update-url-input {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.container-update .update-url-input label {
+    margin-bottom: 4px;
+}
+
+.container-update .update-url-input input {
+    font-size: 1rem;
+    width: 55vw;
+    padding: 10px;
+    margin-top: 2px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.container-update .update-url-input input:focus {
+    outline: 1px solid black;
+    box-shadow: 0 0 5px black;
+}
+
+.container-update .update-url-form-input-icon-password {
+    position: absolute;
+    right: 10px;
+    top: 52%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container-update .update-url-form-input-icon-password:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+.container-update button {
+    background-color: black;
+    width: 150px;
+    color: white;
+    padding: 8px 0;
+    font-size: 1.25rem;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s ease-in-out;
+}
+
+.container-update button:hover {
+    box-shadow: 0 0 10px black;
+}
+
+
+
+
+
+@media (max-width: 1000px) {
+
+    .container-update {
+        width: 90vw;
+    }
+
+    .container-update .update-url-input input {
+        width: 85vw;
+    }
+
+    .container-update .container-navigator {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .container-update .container-navigator .link-list {
+        margin-bottom: 10px;
+    }
+
+    .container-update .container-navigator {
+        margin-bottom: 20px;
+    }
+
+    .container-update .separator {
+        margin-bottom: 20px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .container-update {
+        padding: 30px 10px;
+    }
+
+    .container-update .update-url-input label {
+        font-size: 0.8rem;
+    }
+
+    .information-message {
+        font-size: 1rem;
+    }
+
+    .container-update button {
+        width: 100px;
+        font-size: 1rem;
+    }
+
+    .container-update .update-url-form-input-icon-password {
+        top: 50%;
+    }
+
+}

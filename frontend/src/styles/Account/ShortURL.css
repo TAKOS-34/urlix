@@ -1,0 +1,126 @@
+.container-short-url {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 10px;
+}
+
+.container-short-url .short-url-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.short-url-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.short-url-form .short-url-input {
+    display: flex;
+    flex-direction: column;
+    margin: 8px 0;
+    text-align: center;
+}
+
+.short-url-form label {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.short-url-form input {
+    font-size: 1.5rem;
+    width: 60vw;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.short-url-form input:focus {
+    outline: 1px solid black;
+    box-shadow: 0 0 5px black;
+}
+
+.short-url-form button {
+    background-color: black;
+    width: 200px;
+    color: white;
+    padding: 8px;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s ease-in-out;
+    margin-top: 15px;
+}
+
+.short-url-form button:hover {
+    box-shadow: 0 0 10px black;
+}
+
+.short-url-form-input-icon-password {
+    position: absolute;
+    right: 15px;
+    top: 70%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.short-url-form-input-icon-password:hover {
+    transform: translateY(-50%) scale(1.2);
+}
+
+
+
+
+
+@media (max-width: 1000px) {
+
+    .container-short-url {
+        width: 90vw;
+        padding: 10px 20px;
+    }
+
+    .short-url-form input {
+        width: 80vw;
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .container-short-url .short-url-title {
+        font-size: 1.5rem;
+    }
+
+    .short-url-form input {
+        width: 85vw;
+    }
+
+    .container-short-url {
+        padding: 10px 8px;
+    }
+
+    .container-short-url .information-message {
+        font-size: 0.75rem;
+    }
+
+    .short-url-form label {
+        font-size: 1rem;
+    }
+
+    .short-url-form button {
+        width: 120px;
+        font-size: 1.1rem;
+    }
+
+}

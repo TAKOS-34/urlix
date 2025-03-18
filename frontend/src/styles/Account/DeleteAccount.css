@@ -1,0 +1,81 @@
+.container-delete-account {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.container-delete-account .delete-account-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.container-delete-account .delete-account-text {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.container-delete-account .delete-account-text a {
+    color: black;
+}
+
+.container-delete-account .container-delete-account-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.container-delete-account .delete-account-btn {
+    background-color: rgb(255, 0, 0);
+    width: 250px;
+    color: white;
+    padding: 12px;
+    margin: 30px 0;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s ease-in-out;
+}
+
+.container-delete-account .delete-account-btn:hover {
+    box-shadow: 0 0 10px black;
+}
+
+
+
+
+
+@media (max-width: 1000px) {
+
+    .container-delete-account {
+        width: 90vw;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .container-delete-account {
+        padding: 10px;
+    }
+
+    .container-delete-account .delete-account-title {
+        font-size: 1.5rem;
+    }
+
+    .container-delete-account .delete-account-text {
+        font-size: 1.1rem;
+    }
+
+    .container-delete-account .information-message {
+        font-size: 1rem;
+    }
+
+    .container-delete-account .delete-account-btn {
+        width: 400px;
+        font-size: 1rem;
+    }
+
+}

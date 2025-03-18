@@ -1,0 +1,150 @@
+.container-qrcode {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.container-qrcode .container-navigator {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.container-qrcode .separator {
+    border: 1px solid black;
+    margin-bottom: 40px;
+}
+
+.container-qrcode .container-navigator .link-list a {
+    font-weight: 700;
+    color: black;
+    cursor: pointer;
+}
+
+.container-qrcode .container-navigator .link-list a:hover {
+    font-weight: 900;
+}
+
+.container-qrcode .container-navigator .switch-list a {
+    color: black;
+    cursor: pointer;
+}
+
+.container-qrcode .container-navigator .switch-list a:hover {
+    font-weight: 700;
+}
+
+.container-qrcode .container-descriptor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container-qrcode .container-descriptor .qrcode-descriptor {
+    font-size: 1.75rem;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    word-break: break-all;
+}
+
+.container-qrcode .container-descriptor .qrcode-descriptor a {
+    font-weight: 600;
+    color: black;
+    flex-wrap: wrap;
+    word-break: break-all;
+}
+
+.container-qrcode .container-descriptor .qrcode {
+    height: 300px;
+    width: 300px;
+}
+
+.container-qrcode button {
+    background-color: black;
+    width: 200px;
+    color: white;
+    padding: 8px 0;
+    font-size: 1.25rem;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s ease-in-out;
+    margin-top: 40px;
+}
+
+.container-qrcode button:hover {
+    box-shadow: 0 0 5px black;
+}
+
+
+
+
+
+@media (max-width: 1000px) {
+
+    .container-qrcode {
+        width: 90vw;
+        padding: 20px;
+    }
+
+    .container-qrcode .container-navigator {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .container-qrcode .container-navigator .link-list {
+        margin-bottom: 10px;
+    }
+
+    .container-qrcode .container-navigator {
+        margin-bottom: 20px;
+    }
+
+    .container-qrcode .separator {
+        margin-bottom: 20px;
+    }
+
+    .container-qrcode .container-descriptor .qrcode-descriptor {
+        font-size: 1.3rem;
+    }
+
+    .container-qrcode button {
+        width: 160px;
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    .container-qrcode .container-navigator {
+        font-size: 0.85rem;
+    }
+
+    .container-qrcode .container-navigator {
+        margin-bottom: 10px;
+    }
+
+    .container-qrcode .separator {
+        margin-bottom: 10px;
+    }
+
+    .container-qrcode .container-descriptor .qrcode-descriptor {
+        font-size: 0.9rem;
+    }
+
+    .container-qrcode .container-descriptor .qrcode {
+        height: 200px;
+        width: 200px;
+    }
+
+    .container-qrcode {
+        padding: 20px 10px;
+    }
+
+}

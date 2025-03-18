@@ -1,0 +1,13 @@
+.information-message {
+    font-size: 1.25rem;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fade-in 2s forwards ease-in-out;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 100; }
+}

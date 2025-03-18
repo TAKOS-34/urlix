@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'BorisBlackBloxx';
+    src: url('../assets/fonts/BorisBlackBloxx.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Sans-serif';
+}
+
+html {
+    overflow-x: hidden;
+}
+
+.main {
+    display: flex;
+    flex: 1;
+}
+
+.container {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.logo {
+    font-family: 'BorisBlackBloxx';
+    font-style: italic;
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}

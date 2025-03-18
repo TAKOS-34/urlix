@@ -1,0 +1,134 @@
+.container-manage-api {
+    display: flex;
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+    padding: 40px 50px;
+}
+
+.container-manage-api .information-message {
+    margin: 20px 0;
+}
+
+.container-manage-api .container-generate-api .generate-api-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    word-break: break-word;
+}
+
+.container-manage-api .container-generate-api .generate-api-descriptor {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    word-break: break-word;
+}
+
+.container-manage-api .container-generate-api .generate-api-descriptor span {
+    font-weight: 700;
+}
+
+.container-manage-api .container-generate-api .generate-api-descriptor a {
+    color: black;
+}
+
+.container-manage-api .container-generate-api .generate-api-btn {
+    width: 180px;
+    color: white;
+    background-color: black;
+    padding: 8px 0;
+    font-size: 1.25rem;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s ease-in-out;
+}
+
+.container-manage-api .container-generate-api .generate-api-btn:hover {
+    box-shadow: 0 0 8px black;
+}
+
+.container-manage-api .container-api-informations {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-manage-api .container-api-informations .api-informations-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    word-break: break-word;
+}
+
+.container-manage-api .container-api-informations hr {
+    border: 1px black solid;
+    margin-bottom: 30px;
+}
+
+.container-manage-api .container-api-informations .api-informations-list {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    word-break: break-word;
+}
+
+.container-manage-api .container-api-informations .api-informations-list ul > *:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.container-manage-api .container-api-informations .api-informations-list span {
+    font-weight: 600;
+}
+
+.container-manage-api .container-api-informations .api-informations-contact a {
+    font-size: 1.2rem;
+    color: black;
+    word-break: break-word;
+}
+
+
+
+
+@media (max-width: 1000px) {
+
+    .container-manage-api {
+        width: 90vw;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .container-manage-api {
+        padding: 20px 15px;
+    }
+
+    .container-manage-api .container-generate-api .generate-api-title {
+        font-size: 1.5rem;
+    }
+
+    .container-manage-api .container-generate-api .generate-api-descriptor {
+        font-size: 0.8rem;
+    }
+
+    .container-manage-api .container-generate-api .generate-api-btn {
+        width: 150px;
+        padding: 8px 0;
+        font-size: 1.1rem;
+    }
+
+    .container-manage-api .container-api-informations .api-informations-title {
+        font-size: 1.5rem;
+    }
+
+    .container-manage-api .container-api-informations .api-informations-list {
+        font-size: 1rem;
+    }
+
+    .container-manage-api .container-api-informations .api-informations-contact a {
+        font-size: 0.8rem;
+    }
+
+    .information-message {
+        font-size: 1.1rem;
+    }
+
+}

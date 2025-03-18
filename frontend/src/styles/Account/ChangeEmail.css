@@ -1,0 +1,111 @@
+.container-change-email {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.container-change-email .change-email-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.container-change-email .change-email-text {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.container-change-email .change-email-text a {
+    color: black;
+}
+
+.container-change-email form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.container-change-email input {
+    font-size: 1.5rem;
+    width: 60vw;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin-bottom: 10px;
+}
+
+.container-change-email input:focus {
+    outline: 1px solid black;
+    box-shadow: 0 0 5px black;
+}
+
+.container-change-email .container-change-email-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.container-change-email .change-email-btn {
+    background-color: black;
+    width: 300px;
+    color: white;
+    padding: 12px;
+    margin: 30px 0;
+    font-size: 1.25rem;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s ease-in-out;
+}
+
+.container-change-email .change-email-btn:hover {
+    box-shadow: 0 0 10px black;
+}
+
+
+
+
+
+@media (max-width: 1000px) {
+
+    .container-change-email {
+        width: 90vw;
+    }
+
+    .container-change-email input {
+        width: 80vw;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .container-change-email {
+        padding: 10px;
+    }
+
+    .container-change-email .change-email-title {
+        font-size: 1.5rem;
+    }
+
+    .container-change-email .change-email-text {
+        font-size: 1.1rem;
+    }
+
+    .container-change-email .information-message {
+        font-size: 1rem;
+    }
+
+    .container-change-email input {
+        font-size: 1rem;
+    }
+
+    .container-change-email .change-email-btn {
+        width: 220px;
+        font-size: 1rem;
+    }
+
+}

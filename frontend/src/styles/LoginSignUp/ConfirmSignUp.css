@@ -1,0 +1,39 @@
+.container-confirm-sign-up {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 50px 0;
+}
+
+.container-confirm-sign-up .container-information-message {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 300px;
+    width: 700px;
+    border: 2px solid black;
+    border-radius: 30px;
+    transition: 0.3s ease-in-out;
+    padding: 20px;
+}
+
+.container-confirm-sign-up .container-information-message:hover {
+    box-shadow: 0 0 10px black;
+}
+
+.container-confirm-sign-up .container-information-message .information-message {
+    font-size: 1.5rem;
+}
+
+
+
+
+
+@media (max-width: 750px) {
+    .container-confirm-sign-up .container-information-message {
+        height: 300px;
+        width: 90vw;
+    }
+}

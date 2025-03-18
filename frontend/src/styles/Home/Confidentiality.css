@@ -1,0 +1,107 @@
+.container-confidentiality {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 30px;
+    word-break: break-word;
+}
+
+.container-confidentiality span {
+    font-weight: 450;
+}
+
+.container-confidentiality a {
+    color: black;
+}
+
+.confidentiality-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.confidentiality-intro {
+    font-size: 1.25rem;
+    text-align: justify;
+    margin-bottom: 40px;
+    text-align: justify;
+}
+
+.confidentiality-nav {
+    margin-bottom: 40px;
+}
+
+.confidentiality-nav-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.confidentialitu-nav-list {
+    margin-left: 30px;
+}
+
+.confidentialitu-nav-list li {
+    font-size: 1.1rem;
+    margin: 0 0 5px 0;
+}
+
+.confidentialitu-nav-list a:hover {
+    font-weight: 700;
+}
+
+.confidentiality-section {
+    margin-bottom: 50px;
+}
+
+.confidentiality-section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.confidentiality-section-content {
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+
+
+
+
+@media (max-width: 500px) {
+
+    .container-confidentiality {
+        padding: 20px 10px;
+    }
+
+    .confidentiality-title {
+        font-size: 2rem;
+    }
+
+    .confidentiality-intro {
+        font-size: 1rem;
+    }
+
+    .confidentiality-nav-title {
+        font-size: 1.25rem;
+    }
+
+    .confidentiality-nav a {
+        font-size: 0.8rem;
+    }
+
+    .confidentiality-section {
+        margin-bottom: 30px;
+    }
+
+    .confidentiality-section-title {
+        font-size: 1.25rem;
+    }
+    
+    .confidentiality-section-content {
+        font-size: 0.8rem;
+    }
+
+}
