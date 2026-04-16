@@ -64,7 +64,8 @@ router.post('/verifyPersonalizedUrl', jwtAuth, (req, res) => {
         urlLogger.warn(`User didn't provide valid peronalized URL`, logData);
         return res.json({ status: true, available: false });
     }
-    db.query(`SELECT url FROM url WHERE url = (?)`, [personalizedUrl], (err, row) => {
+    const url = `${process.env.BACKEND_API_URL}/${personalizedUrl}`;
+    db.query(`SELECT url FROM url WHERE url = (?)`, [url], (err, row) => {
         if (err) {
             urlLogger.error(`Error selecting peronalized URL`, logData);
             return res.status(500).json({ status: false });
@@ -125,7 +126,7 @@ router.get('/get/statistics/totalRedirections/:urlId', jwtAuth, (req, res) => {
         return res.status(400).json({ status: false });
     }
     db.query(`SELECT COUNT(*) AS totalRedirection FROM statistics s LEFT JOIN url u ON s.urlId = u.id WHERE u.userId = (?) AND u.id = (?) GROUP BY urlId, userId`, [userId, urlId], (err, rows) => {
-        if (err || !rows || rows.length !== 1) {
+        if (err || !rows) {
             urlLogger.error(`Error selecting User URL row`, logData);
             return res.status(500).json({ status: false });
         }
@@ -146,7 +147,7 @@ router.get('/get/statistics/statisticsLastMonth/:urlId', jwtAuth, (req, res) => 
         return res.status(400).json({ status: false });
     }
     db.query(`SELECT DATE(s.date) AS day, COUNT(*) AS redirectionCount FROM url u LEFT JOIN statistics s ON u.id = s.urlId WHERE u.userId = (?) AND u.id = (?) AND s.date >= NOW() - INTERVAL 30 DAY GROUP BY DATE(s.date) ORDER BY day`, [userId, urlId], (err, rows) => {
-        if (err || !rows || rows.length === 0) {
+        if (err || !rows) {
             urlLogger.error(`Error selecting User URL row`, logData);
             return res.status(500).json({ status: false });
         }
@@ -181,7 +182,7 @@ router.put('/update/:urlId', jwtAuth, (req, res) => {
     const columns = [];
     const values = [];
     if (redirectUrl) columns.push('redirectUrl = (?)'), values.push(redirectUrl);
-    if (personalizedUrl) columns.push('url = (?)'), values.push(personalizedUrl);
+    if (personalizedUrl) columns.push('url = (?)'), values.push(`${process.env.BACKEND_API_URL}/${personalizedUrl}`);
     if (urlName) columns.push('urlName = (?)'), values.push(urlName);
     if (expirationDate) columns.push('expirationDate = (?)'), values.push(expirationDate);
     if (password) columns.push('password = (?)'), values.push(bcrypt.hashSync(password, saltRounds));

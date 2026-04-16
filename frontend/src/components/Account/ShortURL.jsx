@@ -40,7 +40,7 @@ function ShortURL() {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 credentials: 'include',
-                body: JSON.stringify({ personalizeUrl: e })
+                body: JSON.stringify({ personalizedUrl: e })
             })
                 .then(res => res.json())
                 .then(res => {

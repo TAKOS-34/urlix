@@ -222,7 +222,7 @@ router.post('/login', (req, res) => {
                 httpOnly: true,
                 secure: false,
                 sameSite: 'Strict',
-                maxAge: 86400000,
+                maxAge: 604800000,
             });
             userLogger.info(`User logged in successfully`, logData);
             res.json({ status: true, message: 'You\'re logged in, redirection...' });

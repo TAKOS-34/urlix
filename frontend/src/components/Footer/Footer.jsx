@@ -23,7 +23,7 @@ function Footer() {
                 <ul className="nav-confidentiality-donate">
                     <li><Link to="/confidentiality">Confidentiality</Link></li>
                     <li><Link to="/donate">Donate</Link></li>
-                    <li><a href="https://github.com" target="_blank">Source code</a></li>
+                    <li><a href="https://github.com/TAKOS-34/urlix" target="_blank">Source code</a></li>
                 </ul>
             </div>
         </footer>

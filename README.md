@@ -22,6 +22,6 @@ For more detailed guidance, refer to the FAQ section on the website.
 
 ## Support & Donations
 
-If you need any assistance or want to provide feedback, please visit our [Support Page](https://urlix.me/contact).
+If you need any assistance or want to provide feedback, please visit our [Support Page](https://app.urlix.me/contact).
 
-Your donations are welcome and will be reinvested directly into the project. To contribute, head over to our [Donations Page](https://urlix.me/donate).
+Your donations are welcome and will be reinvested directly into the project. To contribute, head over to our [Donations Page](https://app.urlix.me/donate).
