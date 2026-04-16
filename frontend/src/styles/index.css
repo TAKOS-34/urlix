@@ -1,3 +1,58 @@
+@import './theme.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--font-family);
+    font-size: 16px;
+    color: var(--text-main);
+    background-color: var(--bg-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.main {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-main);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+a:hover {
+    color: var(--primary-hover);
+}
+
+li {
+    list-style: none;
+}
+
 @font-face {
     font-family: 'BorisBlackBloxx';
     src: url('../assets/fonts/BorisBlackBloxx.ttf') format('truetype');
@@ -5,42 +60,58 @@
     font-style: normal;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', 'Sans-serif';
-}
-
-html {
-    overflow-x: hidden;
-}
-
-.main {
-    display: flex;
-    flex: 1;
-}
-
-.container {
-    width: 100vw;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-a {
-    text-decoration: none;
-}
-
-li {
-    list-style: none;
-}
-
 .logo {
-    font-family: 'BorisBlackBloxx';
+    font-family: 'BorisBlackBloxx', system-ui;
     font-style: italic;
-    font-size: 2rem;
-    color: white;
-    text-decoration: none;
+    font-size: var(--text-2xl);
+    color: var(--text-main);
     cursor: pointer;
+    letter-spacing: -0.02em;
+}
+
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+    font-size: var(--text-base);
+    color: inherit;
+    background: transparent;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    transition: var(--transition-base);
+}
+
+.card {
+    background: var(--bg-card);
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: var(--space-6);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-primary {
+    background-color: var(--text-main);
+    color: var(--bg-color);
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+}
+
+.btn-primary:hover {
+    background-color: var(--gray-700);
+    transform: translateY(-1px);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
 }

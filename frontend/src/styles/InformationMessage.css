@@ -1,13 +1,40 @@
 .information-message {
-    font-size: 1.25rem;
-    margin: 10px;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    padding: var(--space-3) var(--space-4);
+    margin: var(--space-4) 0;
+    border-radius: var(--border-radius);
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: fade-in 2s forwards ease-in-out;
+    text-align: center;
+    animation: fade-in 0.3s forwards ease-out;
+    line-height: 1.4;
+    border: var(--border-width) solid transparent;
+}
+
+.information-message[style*="color: green"],
+.information-message[style*="color: rgb(0, 128, 0)"] {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--success) !important;
+    border-color: rgba(16, 185, 129, 0.2);
+}
+
+.information-message[style*="color: red"],
+.information-message[style*="color: rgb(255, 0, 0)"] {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: var(--error) !important;
+    border-color: rgba(239, 68, 68, 0.2);
 }
 
 @keyframes fade-in {
-    from { opacity: 0; }
-    to { opacity: 100; }
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

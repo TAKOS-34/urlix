@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import InformationMessage from '../InformationMessage';
+import '../../styles/Home/Contact.css';
 import '../../styles/LoginSignUp/AccountForm.css';
 import emailIcon from '../../assets/images/email.png';
 import subjectIcon from '../../assets/images/subject.png';
@@ -30,12 +31,12 @@ function Contact() {
     }
 
     return (
-        <div className="container-account-form">
+        <div className="container-contact-form">
             <form onSubmit={handleContactSubmit}>
-            <div className="account-form contact-form">
-                <div className="account-form-title">Contact</div>
+            <div className="account-contact contact-form">
+                <div className="account-contact-title">Contact</div>
 
-                    <div className="account-form-input">
+                    <div className="account-contact-input">
                         <input
                             type="email"
                             minLength="4"
@@ -46,10 +47,10 @@ function Contact() {
                             onChange={(e) => setEmail(e.target.value)}
                             required
                         />
-                        <img src={emailIcon} alt="Email Icon" className="account-form-input-icon" />
+                        <img src={emailIcon} alt="Email Icon" className="account-contact-input-icon" />
                     </div>
 
-                    <div className="account-form-input">
+                    <div className="account-contact-input">
                         <input
                             type="text"
                             minLength="4"
@@ -59,10 +60,10 @@ function Contact() {
                             onChange={(e) => setSubject(e.target.value)}
                             required
                         />
-                        <img src={subjectIcon} alt="Subject Icon" className="account-form-input-icon" />
+                        <img src={subjectIcon} alt="Subject Icon" className="account-contact-input-icon" />
                     </div>
 
-                    <div className="account-form-input">
+                    <div className="account-contact-input">
                         <textarea
                             placeholder="Your message"
                             minLength="4"

@@ -1,0 +1,148 @@
+.container-contact-form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 1;
+	padding: var(--space-16) var(--space-8);
+	position: relative;
+	overflow: hidden;
+}
+
+.container-contact-form form {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	position: relative;
+	z-index: 1;
+}
+
+.account-contact.contact-form {
+	width: 100%;
+	max-width: 700px;
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-6);
+	background: linear-gradient(180deg, var(--bg-card) 0%, var(--gray-50) 100%);
+	border: var(--border-width) solid var(--border-color);
+	border-radius: var(--border-radius-lg);
+	padding: var(--space-8);
+	box-shadow: var(--shadow-lg);
+	transition: transform var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.account-contact.contact-form:hover {
+	transform: translateY(-2px);
+	border-color: var(--gray-400);
+	box-shadow: 0 16px 32px rgba(0, 0, 0, 0.45);
+}
+
+.account-contact-title {
+	font-size: clamp(2rem, 3vw, 2.6rem);
+	font-weight: 900;
+	color: var(--text-main);
+	text-align: center;
+	letter-spacing: -0.035em;
+	margin-bottom: var(--space-2);
+}
+
+.account-contact-input {
+	position: relative;
+	width: 100%;
+}
+
+.account-contact-input input,
+.account-contact-input textarea {
+	width: 100%;
+	border: var(--border-width) solid var(--border-color);
+	border-radius: var(--border-radius);
+	background-color: var(--bg-hover);
+	color: var(--text-main);
+	font-size: var(--text-base);
+	transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+}
+
+.account-contact-input input {
+	height: 52px;
+	padding: var(--space-3) 52px var(--space-3) var(--space-4);
+}
+
+.account-contact-input textarea {
+	min-height: 170px;
+	resize: vertical;
+	padding: var(--space-4);
+	line-height: 1.55;
+}
+
+.account-contact-input input::placeholder,
+.account-contact-input textarea::placeholder {
+	color: var(--text-muted);
+}
+
+.account-contact-input input:focus,
+.account-contact-input textarea:focus {
+	outline: none;
+	border-color: var(--primary);
+	box-shadow: 0 0 0 2px var(--primary-light);
+	background-color: var(--bg-card);
+}
+
+.account-contact-input-icon {
+	position: absolute;
+	right: var(--space-4);
+	top: 50%;
+	transform: translateY(-50%);
+	width: 20px;
+	height: 20px;
+	opacity: 0.55;
+	filter: invert(1);
+	transition: opacity var(--transition-fast);
+}
+
+.account-contact-input:focus-within .account-contact-input-icon {
+	opacity: 1;
+}
+
+.account-contact .word-counter {
+	margin-top: var(--space-2);
+	font-size: var(--text-xs);
+	text-align: right;
+	color: var(--text-muted);
+}
+
+.account-contact button {
+	align-self: center;
+	min-width: 170px;
+	padding: var(--space-3) var(--space-8);
+	border-radius: var(--border-radius);
+	border: var(--border-width) solid var(--text-main);
+	background-color: var(--text-main);
+	color: var(--bg-color);
+	font-weight: 700;
+	letter-spacing: 0.01em;
+	transition: transform var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.account-contact button:hover {
+	transform: translateY(-1px);
+	background-color: var(--gray-800);
+	border-color: var(--gray-800);
+}
+
+.account-contact button:active {
+	transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+	.container-contact-form {
+		padding: var(--space-12) var(--space-4);
+	}
+
+	.account-contact.contact-form {
+		padding: var(--space-6);
+		gap: var(--space-4);
+	}
+
+	.account-contact-title {
+		font-size: var(--text-2xl);
+	}
+}

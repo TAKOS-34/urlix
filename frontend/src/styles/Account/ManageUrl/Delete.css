@@ -2,123 +2,90 @@
     display: flex;
     flex: 1;
     flex-direction: column;
-    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.container-delete .container-navigator {
+.container-navigator {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    align-items: center;
+    padding-bottom: var(--space-4);
 }
 
-.container-delete .separator {
-    border: 1px solid black;
-    margin-bottom: 40px;
+.separator {
+    border: none;
+    border-top: var(--border-width) solid var(--border-color);
+    margin-bottom: var(--space-8);
 }
 
-.container-delete .container-navigator .link-list a {
+.container-navigator a {
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+    transition: var(--transition-fast);
+}
+
+.container-navigator .link-list a {
     font-weight: 700;
-    color: black;
-    cursor: pointer;
+    color: var(--text-main);
 }
 
-.container-delete .container-navigator .link-list a:hover {
-    font-weight: 900;
+.container-navigator a:hover {
+    color: var(--primary);
 }
 
-.container-delete .container-navigator .switch-list a {
-    color: black;
-    cursor: pointer;
-}
-
-.container-delete .container-navigator .switch-list a:hover {
-    font-weight: 700;
-}
-
-.container-delete .container-delete-form {
+.container-delete-form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
+    gap: var(--space-8);
+    padding: var(--space-8) 0;
 }
 
-.container-delete .delete-descriptor {
-    font-size: 1.25rem;
-    flex-wrap: wrap;
-    word-break: break-all;
-    text-align: center;
-    margin-bottom: 30px;
+.delete-descriptor {
+    font-size: var(--text-lg);
+    color: var(--text-secondary);
+    line-height: 1.6;
 }
 
 .container-delete span {
     font-weight: 700;
+    color: var(--text-main);
+    word-break: break-all;
 }
 
-.container-delete .delete-btn button {
-    width: 80px;
+.delete-btn {
+    display: flex;
+    gap: var(--space-4);
+}
+
+.delete-btn button {
+    padding: var(--space-3) var(--space-8);
+    font-size: var(--text-base);
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    transition: var(--transition-base);
+}
+
+.delete-btn .yes-btn {
+    background-color: var(--error);
     color: white;
-    padding: 8px 0;
-    font-size: 1.25rem;
-    border-radius: 8px;
-    cursor: pointer;
-    border: none;
-    transition: 0.3s ease-in-out;
 }
 
-.container-update .delete-btn button:hover {
-    box-shadow: 0 0 8px black;
+.delete-btn .no-btn {
+    background-color: var(--text-main);
+    color: var(--bg-color);
 }
 
-.container-delete .delete-btn .yes-btn {
-    background-color: red;
-    margin-right: 20px;
+.delete-btn button:hover {
+    transform: translateY(-1px);
+    filter: brightness(0.9);
 }
 
-.container-delete .delete-btn .no-btn {
-    background-color: black;
-}
-
-
-
-
-
-@media (max-width: 1000px) {
-
-    .container-delete {
-        width: 90vw;
-    }
-
-    .container-delete .container-navigator {
+@media (max-width: 768px) {
+    .container-navigator {
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+        gap: var(--space-2);
     }
-
-    .container-delete .container-navigator .link-list {
-        margin-bottom: 10px;
-    }
-
-    .container-delete .container-navigator {
-        margin-bottom: 20px;
-    }
-
-    .container-delete .separator {
-        margin-bottom: 20px;
-    }
-
-    .container-delete .delete-descriptor {
-        font-size: 1.1rem;
-        margin-bottom: 50px;
-    }
-
-}
-
-@media (max-width: 600px) {
-
-    .container-delete {
-        padding: 20px 10px;
-    }
-
 }

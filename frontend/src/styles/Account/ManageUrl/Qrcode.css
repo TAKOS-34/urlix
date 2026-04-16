@@ -2,149 +2,91 @@
     display: flex;
     flex: 1;
     flex-direction: column;
-    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .container-qrcode .container-navigator {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    align-items: center;
+    margin-bottom: var(--space-4);
 }
 
 .container-qrcode .separator {
-    border: 1px solid black;
-    margin-bottom: 40px;
+    border: none;
+    border-top: var(--border-width) solid var(--border-color);
+    margin-bottom: var(--space-8);
 }
 
-.container-qrcode .container-navigator .link-list a {
+.container-navigator .link-list a {
     font-weight: 700;
-    color: black;
-    cursor: pointer;
+    color: var(--text-main);
 }
 
-.container-qrcode .container-navigator .link-list a:hover {
-    font-weight: 900;
+.container-navigator a:hover {
+    color: var(--primary);
 }
 
-.container-qrcode .container-navigator .switch-list a {
-    color: black;
-    cursor: pointer;
+.container-navigator .switch-list {
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+    transition: var(--transition-fast);
 }
 
-.container-qrcode .container-navigator .switch-list a:hover {
-    font-weight: 700;
-}
-
-.container-qrcode .container-descriptor {
+.container-descriptor {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: var(--space-8) 0;
+    gap: var(--space-8);
 }
 
-.container-qrcode .container-descriptor .qrcode-descriptor {
-    font-size: 1.75rem;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
-    word-break: break-all;
+.qrcode-descriptor {
+    font-size: var(--text-lg);
+    color: var(--text-secondary);
+    line-height: 1.6;
 }
 
-.container-qrcode .container-descriptor .qrcode-descriptor a {
-    font-weight: 600;
-    color: black;
-    flex-wrap: wrap;
-    word-break: break-all;
+.qrcode-descriptor a {
+    font-weight: 700;
+    color: var(--text-main);
 }
 
-.container-qrcode .container-descriptor .qrcode {
-    height: 300px;
-    width: 300px;
+.qrcode {
+    background: white;
+    /* QR codes usually need a white background to be scannable */
+    padding: var(--space-4);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container-qrcode button {
-    background-color: black;
-    width: 200px;
-    color: white;
-    padding: 8px 0;
-    font-size: 1.25rem;
-    border-radius: 8px;
+    background-color: var(--text-main);
+    color: var(--bg-color);
+    padding: var(--space-3) var(--space-8);
+    font-size: var(--text-base);
+    font-weight: 600;
+    border-radius: var(--border-radius);
     cursor: pointer;
     border: none;
-    transition: 0.3s ease-in-out;
-    margin-top: 40px;
+    transition: var(--transition-base);
 }
 
 .container-qrcode button:hover {
-    box-shadow: 0 0 5px black;
+    background-color: var(--gray-800);
+    transform: translateY(-1px);
 }
 
-
-
-
-
-@media (max-width: 1000px) {
-
-    .container-qrcode {
-        width: 90vw;
-        padding: 20px;
-    }
-
+@media (max-width: 768px) {
     .container-qrcode .container-navigator {
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+        gap: var(--space-2);
     }
-
-    .container-qrcode .container-navigator .link-list {
-        margin-bottom: 10px;
-    }
-
-    .container-qrcode .container-navigator {
-        margin-bottom: 20px;
-    }
-
-    .container-qrcode .separator {
-        margin-bottom: 20px;
-    }
-
-    .container-qrcode .container-descriptor .qrcode-descriptor {
-        font-size: 1.3rem;
-    }
-
-    .container-qrcode button {
-        width: 160px;
-        font-size: 1rem;
-    }
-
-}
-
-@media (max-width: 450px) {
-
-    .container-qrcode .container-navigator {
-        font-size: 0.85rem;
-    }
-
-    .container-qrcode .container-navigator {
-        margin-bottom: 10px;
-    }
-
-    .container-qrcode .separator {
-        margin-bottom: 10px;
-    }
-
-    .container-qrcode .container-descriptor .qrcode-descriptor {
-        font-size: 0.9rem;
-    }
-
-    .container-qrcode .container-descriptor .qrcode {
-        height: 200px;
-        width: 200px;
-    }
-
-    .container-qrcode {
-        padding: 20px 10px;
-    }
-
 }

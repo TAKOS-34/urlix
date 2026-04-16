@@ -1,76 +1,72 @@
 .footer {
     display: flex;
     justify-content: space-between;
-    padding: 15px 40px;
-    background-color: black;
+    align-items: flex-start;
+    padding: var(--space-12) var(--space-8);
+    background-color: var(--bg-card);
+    border-top: var(--border-width) solid var(--border-color);
+    margin-top: auto;
 }
 
-.footer .footer-logo {
+.footer-logo {
     display: flex;
     flex-direction: column;
+    gap: var(--space-2);
+}
+
+.footer-logo .logo {
+    font-size: var(--text-lg);
+    font-weight: 800;
 }
 
 .footer .copyright {
-    color: white;
-}
-
-.footer a {
-    color: white;
+    color: var(--text-muted);
+    font-size: var(--text-xs);
 }
 
 .footer .footer-nav {
     display: flex;
-    justify-content: space-between;
+    gap: var(--space-12);
 }
 
-.footer .footer-nav .nav-links {
-    margin-right: 25px;
+.footer .footer-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
 }
 
-.footer .footer-nav li:not(:last-child) {
-    margin-bottom: 5px;
+.footer .footer-nav li a {
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+    transition: var(--transition-fast);
+}
+
+.footer .footer-nav li a:hover {
+    color: var(--primary);
 }
 
 .footer .footer-nav .separator {
     width: 1px;
-    background-color: white;
-    margin-right: 25px;
+    background-color: var(--border-color);
+    align-self: stretch;
 }
 
-
-
-
-
-@media (max-width: 600px) {
-
+@media (max-width: 768px) {
     .footer {
         flex-direction: column;
-        justify-content: center;
+        gap: var(--space-8);
+        padding: var(--space-8) var(--space-4);
         align-items: center;
-    }
-
-    .footer .footer-logo {
-        display: flex;
-        align-items: center;
-        margin-bottom: 20px;
+        text-align: center;
     }
 
     .footer .footer-nav {
         flex-direction: column;
-    }
-
-    .footer .footer-nav .nav-links {
-        text-align: center;
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .footer .footer-nav .nav-confidentiality-donate {
-        text-align: center;
+        gap: var(--space-6);
+        align-items: center;
     }
 
     .footer .footer-nav .separator {
         display: none;
     }
-
 }

@@ -64,7 +64,7 @@ function Api() {
     "message": "API Key missing"
 }
 
-// ❌ Error : If you have a invalid API key | Return code 401
+// ❌ Error : If you have an invalid API key | Return code 401
 {
     "status": false,
     "message": "Invalid API Key"
@@ -82,7 +82,7 @@ function Api() {
                     <div className="endpoints-url">
                         <div className="endpoints-subtitle">Endpoint URL : </div>
                         <SyntaxHighlighter language="bash" style={dracula} className="code-snippet">
-                            {`https://urlix.me/api/create`}
+                            {`POST/ https://urlix.me/api/create`}
                         </SyntaxHighlighter>
                     </div>
 
@@ -171,7 +171,7 @@ password: "sercure@123"
                     <div className="endpoints-url">
                         <div className="endpoints-subtitle">Endpoint URL : </div>
                         <SyntaxHighlighter language="bash" style={dracula} className="code-snippet">
-                            {`https://urlix.me/api/get/all`}
+                            {`GET/ https://urlix.me/api/get/all`}
                         </SyntaxHighlighter>
                     </div>
 
@@ -240,7 +240,7 @@ password: "sercure@123"
                     <div className="endpoints-url">
                         <div className="endpoints-subtitle">Endpoint URL : </div>
                         <SyntaxHighlighter language="bash" style={dracula} className="code-snippet">
-                            {`https://urlix.me/api/get/id/{urlId}`}
+                            {`GET/ https://urlix.me/api/get/id/{urlId}`}
                         </SyntaxHighlighter>
                     </div>
 
@@ -321,7 +321,7 @@ https://urlix.me/api/get/id/40034 # 40034 is the URL ID here
                     <div className="endpoints-url">
                         <div className="endpoints-subtitle">Endpoint URL : </div>
                         <SyntaxHighlighter language="bash" style={dracula} className="code-snippet">
-                            {`https://urlix.me/api/get/url?value={urlValue}`}
+                            {`GET/ https://urlix.me/api/get/url?value={urlValue}`}
                         </SyntaxHighlighter>
                     </div>
 
@@ -402,7 +402,7 @@ https://urlix.me/api/get/url?value=https://urlix.me/google-request # "https://ur
                     <div className="endpoints-url">
                         <div className="endpoints-subtitle">Endpoint URL : </div>
                         <SyntaxHighlighter language="bash" style={dracula} className="code-snippet">
-                            {`https://urlix.me/api/update/{urlId}`}
+                            {`PUT/ https://urlix.me/api/update/{urlId}`}
                         </SyntaxHighlighter>
                     </div>
 
@@ -506,7 +506,7 @@ password: "sercure@123"
                     <div className="endpoints-url">
                         <div className="endpoints-subtitle">Endpoint URL : </div>
                         <SyntaxHighlighter language="bash" style={dracula} className="code-snippet">
-                            {`https://urlix.me/api/delete/{urlId}`}
+                            {`DELETE/ https://urlix.me/api/delete/{urlId}`}
                         </SyntaxHighlighter>
                     </div>
 

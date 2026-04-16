@@ -2,110 +2,85 @@
     display: flex;
     flex: 1;
     flex-direction: column;
-    padding: 30px;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.container-change-email .change-email-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 30px;
+.change-email-title {
+    font-size: var(--text-2xl);
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: var(--space-4);
     text-align: center;
 }
 
-.container-change-email .change-email-text {
-    font-size: 1.5rem;
+.change-email-text {
+    font-size: var(--text-base);
+    color: var(--text-secondary);
     text-align: center;
+    margin-bottom: var(--space-8);
 }
 
-.container-change-email .change-email-text a {
-    color: black;
+.change-email-text a {
+    color: var(--text-secondary);
 }
 
 .container-change-email form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin-top: 10px;
+    gap: var(--space-4);
 }
 
 .container-change-email input {
-    font-size: 1.5rem;
-    width: 60vw;
-    padding: 10px;
-    border-radius: 10px;
-    border: 2px solid black;
-    margin-bottom: 10px;
+    font-size: var(--text-base);
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--border-radius);
+    border: var(--border-width) solid var(--border-color);
+    background: var(--bg-hover);
+    color: var(--text-main);
+    transition: var(--transition-base);
 }
 
 .container-change-email input:focus {
-    outline: 1px solid black;
-    box-shadow: 0 0 5px black;
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px var(--primary-light);
 }
 
-.container-change-email .container-change-email-btn {
+.container-change-email-btn {
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
-.container-change-email .change-email-btn {
-    background-color: black;
-    width: 300px;
-    color: white;
-    padding: 12px;
-    margin: 30px 0;
-    font-size: 1.25rem;
-    border-radius: 8px;
+.change-email-btn {
+    background-color: var(--text-main);
+    color: var(--bg-color);
+    width: 100%;
+    max-width: 300px;
+    padding: var(--space-3) var(--space-6);
+    font-size: var(--text-base);
+    font-weight: 700;
+    border-radius: var(--border-radius);
     cursor: pointer;
     border: none;
-    transition: 0.3s ease-in-out;
+    transition: var(--transition-base);
+    margin: var(--space-4) 0;
 }
 
-.container-change-email .change-email-btn:hover {
-    box-shadow: 0 0 10px black;
+.change-email-btn:hover {
+    background-color: var(--gray-800);
+    transform: translateY(-1px);
 }
 
-
-
-
-
-@media (max-width: 1000px) {
-
-    .container-change-email {
-        width: 90vw;
-    }
-
-    .container-change-email input {
-        width: 80vw;
-    }
-
+.change-email-text a:hover {
+    color: var(--primary);
 }
 
 @media (max-width: 600px) {
-
-    .container-change-email {
-        padding: 10px;
+    .change-email-btn {
+        max-width: 100%;
     }
-
-    .container-change-email .change-email-title {
-        font-size: 1.5rem;
-    }
-
-    .container-change-email .change-email-text {
-        font-size: 1.1rem;
-    }
-
-    .container-change-email .information-message {
-        font-size: 1rem;
-    }
-
-    .container-change-email input {
-        font-size: 1rem;
-    }
-
-    .container-change-email .change-email-btn {
-        width: 220px;
-        font-size: 1rem;
-    }
-
 }

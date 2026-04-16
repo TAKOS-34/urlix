@@ -5,47 +5,45 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 30px;
+    padding: var(--space-12) var(--space-4);
+    gap: var(--space-6);
 }
 
 .not-found-title {
-    font-size: 1.75rem;
-    margin-bottom: 20px;
+    font-size: clamp(3rem, 10vw, 2rem);
+    font-weight: 900;
+    color: var(--text-main);
+    letter-spacing: -0.05em;
+    line-height: 1;
+}
+
+.container-not-found p {
+    font-size: var(--text-xl);
+    color: var(--text-secondary);
+    max-width: 500px;
 }
 
 .container-not-found button {
-    background-color: black;
-    width: 300px;
-    color: white;
-    padding: 8px;
-    font-size: 1.5rem;
-    border-radius: 8px;
+    background-color: var(--text-main);
+    color: var(--bg-color);
+    width: 100%;
+    max-width: 240px;
+    padding: var(--space-3) var(--space-6);
+    font-size: var(--text-base);
+    font-weight: 700;
+    border-radius: var(--border-radius);
     cursor: pointer;
     border: none;
-    transition: 0.3s ease-in-out;
+    transition: var(--transition-base);
 }
 
 .container-not-found button:hover {
-    box-shadow: 0 0 10px black;
+    background-color: var(--gray-800);
+    transform: translateY(-2px);
 }
 
-
-
-
 @media (max-width: 600px) {
-
-    .container-not-found {
-        padding: 10px;
-    }
-
     .not-found-title {
-        font-size: 1.25rem;
-        margin-bottom: 20px;
+        font-size: 1.5rem;
     }
-
-    .container-not-found button {
-        width: 250px;
-        font-size: 1.25rem;
-    }
-
 }

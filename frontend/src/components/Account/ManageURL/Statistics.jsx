@@ -15,8 +15,12 @@ const Statistics = ({ data }) => {
                 {
                     label: 'Redirections per day',
                     data: redirectionCounts,
-                    borderColor: 'rgb(0, 0, 0)',
-                    backgroundColor: 'rgb(0, 0, 0)',
+                    borderColor: 'rgbrgb(255, 255, 255)',
+                    backgroundColor: 'rgb(255, 255, 255)',
+                    pointBackgroundColor: '#f9fafb',
+                    pointBorderColor: '#f9fafb',
+                    pointHoverBackgroundColor: '#f9fafb',
+                    pointHoverBorderColor: '#f9fafb',
                     fill: true,
                     tension: 0.4
                 }
@@ -27,6 +31,11 @@ const Statistics = ({ data }) => {
     const options = {
         responsive: true,
         plugins: {
+            legend: {
+                labels: {
+                    color: '#f9fafb'
+                }
+            },
             tooltip: {
                 mode: 'index',
                 intersect: false
@@ -34,15 +43,29 @@ const Statistics = ({ data }) => {
         },
         scales: {
             x: {
+                ticks: {
+                    color: '#f9fafb'
+                },
+                grid: {
+                    color: 'rgba(249, 250, 251, 0.15)'
+                },
                 title: {
                     display: true,
-                    text: 'Date'
+                    text: 'Date',
+                    color: '#f9fafb'
                 }
             },
             y: {
+                ticks: {
+                    color: '#f9fafb'
+                },
+                grid: {
+                    color: 'rgba(249, 250, 251, 0.15)'
+                },
                 title: {
                     display: true,
-                    text: 'Redirections'
+                    text: 'Redirections',
+                    color: '#f9fafb'
                 }
             }
         }

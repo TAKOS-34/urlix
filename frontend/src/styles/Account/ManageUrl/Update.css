@@ -2,159 +2,118 @@
     display: flex;
     flex: 1;
     flex-direction: column;
-    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .container-update .container-navigator {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    align-items: center;
+    margin-bottom: var(--space-4);
 }
 
 .container-update .separator {
-    border: 1px solid black;
-    margin-bottom: 40px;
+    border: none;
+    border-top: var(--border-width) solid var(--border-color);
+    margin-bottom: var(--space-8);
 }
 
-.container-update .container-navigator .link-list a {
+.container-navigator .link-list a {
     font-weight: 700;
-    color: black;
-    cursor: pointer;
+    color: var(--text-main);
 }
 
-.container-update .container-navigator .link-list a:hover {
-    font-weight: 900;
+.container-navigator .switch-list {
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+    transition: var(--transition-fast);
 }
 
-.container-update .container-navigator .switch-list a {
-    color: black;
-    cursor: pointer;
+.container-navigator a:hover {
+    color: var(--primary);
 }
 
-.container-update .container-navigator .switch-list a:hover {
-    font-weight: 700;
-}
-
-.container-update .container-update-form form {
+.container-update-form form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    gap: var(--space-6);
+    padding: var(--space-8) 0;
 }
 
-.container-update .update-url-input {
+.update-url-input {
     display: flex;
     flex-direction: column;
-    text-align: center;
+    gap: var(--space-2);
+    width: 100%;
+    position: relative;
 }
 
-.container-update .update-url-input label {
-    margin-bottom: 4px;
+.update-url-input label {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--text-secondary);
 }
 
-.container-update .update-url-input input {
-    font-size: 1rem;
-    width: 55vw;
-    padding: 10px;
-    margin-top: 2px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    border: 2px solid black;
+.update-url-input input {
+    font-size: var(--text-base);
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--border-radius);
+    border: var(--border-width) solid var(--border-color);
+    background-color: var(--bg-hover);
+    color: var(--text-main);
+    transition: var(--transition-base);
 }
 
-.container-update .update-url-input input:focus {
-    outline: 1px solid black;
-    box-shadow: 0 0 5px black;
+.update-url-input input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px var(--primary-light);
 }
 
-.container-update .update-url-form-input-icon-password {
+.update-url-form-input-icon-password {
     position: absolute;
-    right: 10px;
-    top: 52%;
+    right: var(--space-4);
+    top: 70%;
     transform: translateY(-50%);
     width: 20px;
     height: 20px;
     cursor: pointer;
-    pointer-events: auto;
-    transition: transform 0.3s ease-in-out;
+    opacity: 0.5;
+    filter: invert(1);
+    transition: var(--transition-fast);
 }
 
-.container-update .update-url-form-input-icon-password:hover {
+.update-url-form-input-icon-password:hover {
+    opacity: 1;
     transform: translateY(-50%) scale(1.1);
 }
 
 .container-update button {
-    background-color: black;
-    width: 150px;
-    color: white;
-    padding: 8px 0;
-    font-size: 1.25rem;
-    border-radius: 8px;
+    background-color: var(--text-main);
+    color: var(--bg-color);
+    width: 100%;
+    max-width: 200px;
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--text-base);
+    font-weight: 600;
+    border-radius: var(--border-radius);
     cursor: pointer;
     border: none;
-    transition: 0.3s ease-in-out;
+    transition: var(--transition-base);
 }
 
 .container-update button:hover {
-    box-shadow: 0 0 10px black;
+    background-color: var(--gray-800);
+    transform: translateY(-1px);
 }
 
-
-
-
-
-@media (max-width: 1000px) {
-
-    .container-update {
-        width: 90vw;
-    }
-
-    .container-update .update-url-input input {
-        width: 85vw;
-    }
-
+@media (max-width: 768px) {
     .container-update .container-navigator {
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+        gap: var(--space-2);
     }
-
-    .container-update .container-navigator .link-list {
-        margin-bottom: 10px;
-    }
-
-    .container-update .container-navigator {
-        margin-bottom: 20px;
-    }
-
-    .container-update .separator {
-        margin-bottom: 20px;
-    }
-
-}
-
-@media (max-width: 500px) {
-
-    .container-update {
-        padding: 30px 10px;
-    }
-
-    .container-update .update-url-input label {
-        font-size: 0.8rem;
-    }
-
-    .information-message {
-        font-size: 1rem;
-    }
-
-    .container-update button {
-        width: 100px;
-        font-size: 1rem;
-    }
-
-    .container-update .update-url-form-input-icon-password {
-        top: 50%;
-    }
-
 }

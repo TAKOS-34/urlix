@@ -1,67 +1,54 @@
 .informations-container {
     display: flex;
     flex: 1;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    overflow: hidden;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
 }
 
-.informations-container .information-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 30px;
+.information-title {
+    font-size: var(--text-2xl);
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: var(--space-8);
     text-align: center;
-    word-break: break-word;
+    letter-spacing: -0.025em;
 }
 
 .informations-container ul {
-    text-align: center;
-    font-size: 2rem;
+    background: var(--bg-card);
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius-lg);
+    padding: var(--space-4);
+    display: flex;
+    flex-direction: column;
 }
 
 .informations-container li {
-    padding: 15px 0;
-    margin-bottom: 15px;
-    flex-wrap: wrap;
-    word-break: break-word;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-4) var(--space-6);
+    font-size: var(--text-base);
+    color: var(--text-secondary);
 }
 
 .informations-container li:not(:last-child) {
-    border-bottom: 2px solid black;
+    border-bottom: var(--border-width) solid var(--border-color);
 }
 
 .informations-container span {
     font-weight: 700;
+    color: var(--text-main);
+    word-break: break-all;
 }
 
-
-
-
-@media (max-width: 1000px) {
-    .informations-container {
-        width: 90vw;
-    }
-
+@media (max-width: 600px) {
     .informations-container li {
-        font-size: 1.5rem;
-    }
-}
-
-@media (max-width: 650px) {
-    .informations-container .information-title {
-        font-size: 1.5rem;
-        margin-bottom: 20px;
-    }
-
-    .informations-container li {
-        font-size: 1rem;
-        margin-bottom: 10px;
-    }
-}
-
-@media (max-width: 450px) {
-    .informations-container {
-        padding: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-1);
+        padding: var(--space-4);
     }
 }

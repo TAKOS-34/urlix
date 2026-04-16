@@ -2,120 +2,107 @@
     display: flex;
     flex: 1;
     flex-direction: column;
-    padding: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .container-infos-stats .container-navigator {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    align-items: center;
+    margin-bottom: var(--space-4);
 }
 
 .container-infos-stats .separator {
-    border: 1px solid black;
-    margin-bottom: 40px;
+    border: none;
+    border-top: var(--border-width) solid var(--border-color);
+    margin-bottom: var(--space-8);
 }
 
-.container-infos-stats .container-navigator .link-list a {
+.container-navigator .link-list a {
     font-weight: 700;
-    color: black;
-    cursor: pointer;
+    color: var(--text-main);
 }
 
-.container-infos-stats .container-navigator .link-list a:hover {
-    font-weight: 900;
+.container-navigator .switch-list {
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+    transition: var(--transition-fast);
 }
 
-.container-infos-stats .container-navigator .switch-list a {
-    color: black;
-    cursor: pointer;
+.container-navigator a:hover {
+    color: var(--primary);
 }
 
-.container-infos-stats .container-navigator .switch-list a:hover {
-    font-weight: 700;
-}
-
-.container-infos-stats .container-infos-list {
+.container-infos-list {
     display: flex;
     flex-direction: column;
+    gap: var(--space-8);
+    width: 100%;
+}
+
+.container-infos-list ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.container-infos-list li {
+    padding: var(--space-4) 0;
+    border-bottom: var(--border-width) solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
+    gap: var(--space-4);
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
 
-.container-infos-stats .container-infos-list li {
-    font-size: 1.15rem;
+.container-infos-list li:last-child {
+    border-bottom: none;
 }
 
-.container-infos-stats .container-infos-list li:not(:last-child) {
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-    word-break: break-word;
-}
-
-.container-infos-stats .container-infos-list li span {
+.container-infos-list li span {
     font-weight: 700;
+    font-size: var(--text-base);
+    color: var(--text-main);
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
-.container-infos-stats .container-infos-list .container-details-stats-li {
+.container-details-stats-li {
+    grid-column: 1 / -1;
     display: flex;
     flex-direction: column;
+    gap: var(--space-4);
+}
+
+.container-details-stats {
+    background: var(--bg-card);
+    padding: var(--space-2);
+    width: 100%;
+    min-height: 300px;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.container-infos-stats .container-infos-list .container-details-stats {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid black;
-    border-radius: 10px;
-    padding: 20px;
-    margin-top: 15px;
-    height: auto;
-    width: 55vw;
-}
-
-
-
-
-
-
-@media (max-width: 1000px) {
-    .container-infos-stats {
-        width: 90vw;
-    }
-
+@media (max-width: 768px) {
     .container-infos-stats .container-navigator {
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+        gap: var(--space-2);
     }
 
-    .container-infos-stats .container-navigator .link-list {
-        margin-bottom: 10px;
+    .container-infos-list li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-1);
     }
 
-    .container-infos-stats .container-navigator {
-        margin-bottom: 20px;
+    .container-infos-list li span {
+        white-space: nowrap;
     }
-
-    .container-infos-stats .separator {
-        margin-bottom: 20px;
-    }
-
-    .container-infos-stats .container-infos-list .container-details-stats {
-        width: 80vw;
-    }
-}
-
-@media (max-width: 600px) {
-    .container-infos-stats {
-        padding: 20px 10px;
-    }
-
-    .container-infos-stats .container-navigator {
-        font-size: 0.9rem;
-    }
-
 }

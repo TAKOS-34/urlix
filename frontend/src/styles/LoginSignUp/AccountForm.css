@@ -4,223 +4,167 @@
     align-items: center;
     flex-direction: column;
     flex: 1;
-    padding: 50px 0;
+    padding: var(--space-12) var(--space-4);
+    background-color: var(--bg-color);
 }
 
 .account-form {
-    height: 525px;
-    width: 500px;
+    width: 100%;
+    max-width: 480px;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    border: 2px solid black;
-    border-radius: 30px;
-    padding: 30px;
-    overflow: hidden;
-    transition: 0.3s ease-in-out;
-    text-align: center;
+    gap: var(--space-6);
+    background: var(--bg-card);
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius-lg);
+    padding: var(--space-12);
+    box-shadow: var(--shadow-lg);
+    transition: transform var(--transition-base), border-color var(--transition-base);
 }
 
 .account-form:hover {
-    box-shadow: 0 0 10px black;
-}
-
-.contact-form {
-    height: 625px;
+    border-color: var(--gray-400);
 }
 
 .account-form-title {
-    font-size: 2.25rem;
-    font-weight: 700;
+    font-size: var(--text-2xl);
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: var(--space-2);
+    letter-spacing: -0.025em;
+    text-align: center;
 }
 
 .account-form button {
-    background-color: black;
-    width: 150px;
-    color: white;
-    padding: 8px;
-    font-size: 1.5rem;
-    border-radius: 8px;
+    background-color: var(--text-main);
+    color: var(--bg-color);
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--text-base);
+    font-weight: 600;
+    border-radius: var(--border-radius);
     cursor: pointer;
     border: none;
-    transition: 0.3s ease-in-out;
+    transition: var(--transition-base);
+    margin-top: var(--space-2);
+}
+
+.account-form button:hover {
+    background-color: var(--gray-800);
 }
 
 .reset-password-btn button {
-    background-color: black;
-    width: 330px;
-    color: white;
-    padding: 8px;
-    font-size: 1.5rem;
-    border-radius: 8px;
-    cursor: pointer;
-    border: none;
-    transition: 0.3s ease-in-out;
+    width: 100%;
 }
 
-.container-account-form button:hover {
-    box-shadow: 0 0 10px black;
+.account-form input,
+.account-form textarea {
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--border-radius);
+    border: var(--border-width) solid var(--border-color);
+    background-color: var(--bg-hover);
+    color: var(--text-main);
+    transition: var(--transition-fast);
+    font-size: var(--text-base);
 }
 
-.account-form input {
-    font-size: 1.5rem;
-    width: 400px;
-    padding: 10px;
-    border-radius: 10px;
-    border: 2px solid black;
-}
-
-.account-form input:focus {
-    outline: 1px solid black;
-    box-shadow: 0 0 5px black;
+.account-form input:focus,
+.account-form textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px var(--primary-light);
 }
 
 .account-form textarea {
-    font-size: 1.2rem;
-    height: 250px;
-    width: 400px;
-    max-width: 400px;
-    padding: 10px;
-    border-radius: 10px;
-    border: 2px solid black;
-}
-
-.account-form textarea:focus {
-    outline: 1px solid black;
-    box-shadow: 0 0 5px black;
-}
-
-.account-form .word-counter {
-    font-size: 1rem;
-}
-
-.account-form > * {
-    margin: 10px;
-}
-
-.account-form .password-informations {
-    font-size: 1rem;
+    min-height: 150px;
+    resize: vertical;
 }
 
 .account-form-input {
     position: relative;
+    width: 100%;
 }
 
 .account-form-input input {
-    padding-right: 50px;
+    padding-right: var(--space-12);
+}
+
+.account-form-input-icon,
+.account-form-input-icon-password {
+    position: absolute;
+    right: var(--space-4);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    opacity: 0.5;
+    transition: opacity var(--transition-fast);
+    filter: invert(1);
+}
+
+.account-form-input:focus-within .account-form-input-icon,
+.account-form-input:focus-within .account-form-input-icon-password {
+    opacity: 1;
 }
 
 .account-form-input-icon-password {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    transform-origin: center;
-    width: 20px;
-    height: 20px;
     cursor: pointer;
     pointer-events: auto;
-    transition: transform 0.3s ease-in-out;
 }
 
-.account-form-input-icon-password:hover {
-    transform: translateY(-50%) scale(1.2);
-}
-
-.account-form-input-icon {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
-    pointer-events: none;
-}
-
-.container-resend-email {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.container-resend-email button {
-    background-color: black;
-    width: 280px;
-    color: white;
-    padding: 8px;
-    font-size: 1.25rem;
-    border-radius: 8px;
-    cursor: pointer;
+.redirection-message {
     text-align: center;
-    border: none;
-    transition: 0.3s ease-in-out;
-    margin: 20px 0 20px 0;
+    margin-top: var(--space-1);
 }
 
 .redirection-message a {
-    color: black;
-    text-decoration: underline;
-    transform: 0.3s;
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: var(--transition-fast);
 }
 
 .redirection-message a:hover {
-    color: rgb(100, 100, 100);
+    color: var(--primary);
 }
 
+.container-resend-email {
+    margin-top: var(--space-6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+}
 
+.container-resend-email button {
+    background-color: transparent;
+    color: var(--text-secondary);
+    border: var(--border-width) solid var(--border-color);
+    padding: var(--space-2) var(--space-6);
+    font-size: var(--text-sm);
+    border-radius: var(--border-radius);
+}
 
+.container-resend-email button:hover {
+    border-color: var(--text-main);
+    color: var(--text-main);
+    background-color: var(--bg-hover);
+}
 
+.word-counter {
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+    text-align: right;
+}
 
-@media (max-width: 550px) {
+.password-informations {
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+@media (max-width: 640px) {
     .account-form {
-        height: 450px;
-        width: 85vw;
-        padding: 10px;
-    }
-
-    .account-form input {
-        font-size: 1rem;
-        width: 75vw;
-    }
-
-    .account-form textarea {
-        font-size: 0.8rem;
-        height: 150px;
-        width: 75vw;
-        max-width: 75vw;
-    }
-
-    .account-form .word-counter {
-        font-size: 0.8rem;
-    }
-
-    .account-form button {
-        width: 100px;
-        font-size: 1rem;
-    }
-
-    .account-form .information-message {
-        font-size: 0.75rem;
-        margin: 0;
-    }
-
-    .reset-password-btn button {
-        width: 220px;
-        font-size: 1rem;
-    }
-
-    .account-form .password-informations {
-        font-size: 0.75rem;
-        margin: 5px;
-    }
-
-    .redirection-message a {
-        font-size: 0.70rem;
-    }
-
-    .account-form .information-message {
-        font-size: 0.75rem;
+        padding: var(--space-8);
     }
 }

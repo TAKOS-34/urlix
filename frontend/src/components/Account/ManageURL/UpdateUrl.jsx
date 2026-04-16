@@ -104,7 +104,6 @@ function UpdateUrl() {
                                     type="text"
                                     value={urlInfos.url}
                                     disabled
-                                    style={{ backgroundColor: '#cecece' }}
                                 />
                             </div>
 
