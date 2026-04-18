@@ -5,6 +5,7 @@ import InformationMessage from '../InformationMessage';
 import '../../styles/LoginSignUp/AccountForm.css';
 import emailIcon from '../../assets/images/email.png';
 import passwordIcon from '../../assets/images/password.png';
+import { Helmet } from 'react-helmet-async';
 
 function Login() {
     const { isLoggedIn, loading } = useAuth();
@@ -19,11 +20,9 @@ function Login() {
         if (!loading) {
             if (isLoggedIn) {
                 navigate('/');
-            } else {
-                document.title = `URLY | Login`;
             }
         }
-    }, [isLoggedIn]);
+    }, [isLoggedIn, loading, navigate]);
 
     const handleResendEmail = () => {
         fetch(`${process.env.REACT_APP_BACKEND_URL}/user/resendEmail`, {
@@ -68,6 +67,10 @@ function Login() {
 
     return (
         <div className="container-account-form">
+            <Helmet>
+                <title>URLIX | Login</title>
+                <meta name="description" content="Login to your URLIX account to manage your shortened URLs and access the API." />
+            </Helmet>
             <form className="account-form " onSubmit={handleLogin}>
 
                 <div className="account-form-title">Login</div>

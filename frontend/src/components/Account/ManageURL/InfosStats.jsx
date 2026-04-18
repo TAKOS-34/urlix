@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useParams, useNavigate } from "react-router-dom";
 import Statistics from './Statistics';
 import '../../../styles/Account/ManageUrl/InfosStats.css';
+import { Helmet } from 'react-helmet-async';
 
 function InfosStats() {
     const navigate = useNavigate();
@@ -22,7 +23,6 @@ function InfosStats() {
             .then(res => {
                 if (res.status) {
                     setUrlInfos(res.data);
-                    document.title = `URLIX | Informations & Statistics`;
                 } else {
                     navigate('/');
                 }
@@ -74,6 +74,10 @@ function InfosStats() {
 
     return (
         <div className="container-infos-stats">
+        <Helmet>
+            <title>URLIX | Informations & Statistics</title>
+            <meta name="description" content="Detailed statistics and information for your shortened URL." />
+        </Helmet>
         {!urlInfos || !urlStatistics || (!totalRedirection && totalRedirection !== 0) ? (
             <div></div>
         ) : (

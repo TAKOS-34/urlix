@@ -1,12 +1,15 @@
 import React from 'react';
 import '../../styles/Home/Donate.css';
 import PaypalLogo from '../../assets/images/paypal-logo.png'
+import { Helmet } from 'react-helmet-async';
 
 function Donate() {
-    document.title = `URLIX | Donate`;
-
     return (
         <div className="container-donate">
+            <Helmet>
+                <title>URLIX | Donate</title>
+                <meta name="description" content="Support URLIX - Consider making a donation to help keep our free URL shortener service running and evolving." />
+            </Helmet>
             <div className="donate-title">Donate | Support the project</div>
 
             <div className="donate-content">

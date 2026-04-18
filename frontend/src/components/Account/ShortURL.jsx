@@ -3,6 +3,7 @@ import InformationMessage from '../InformationMessage';
 import '../../styles/Account/ShortURL.css';
 import showIcon from '../../assets/images/show.png';
 import hideIcon from '../../assets/images/hide.png';
+import { Helmet } from 'react-helmet-async';
 
 function ShortURL() {
     const [redirectUrl, setRedirectUrl] = useState('');
@@ -13,7 +14,6 @@ function ShortURL() {
     const [showPassword, setShowPassword] = useState(false);
     const [expirationDate, setExpirationDate] = useState('');
     const [informationMessage, setInformationMessage] = useState({ text: '', color: '' });
-    document.title = `URLIX | Short URL`;
 
     const handleShortUrl = (e) => {
         e.preventDefault();
@@ -59,6 +59,10 @@ function ShortURL() {
 
     return (
         <div className="container-short-url">
+            <Helmet>
+                <title>URLIX | Short URL</title>
+                <meta name="description" content="Create a new shortened URL with custom slug, password protection, and expiration date." />
+            </Helmet>
             <div className="short-url-title">Short URL</div>
 
             <form onSubmit={handleShortUrl} className="short-url-form">

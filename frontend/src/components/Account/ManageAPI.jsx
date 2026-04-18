@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import InformationMessage from '../InformationMessage';
 import '../../styles/Account/ManageApi.css';
+import { Helmet } from 'react-helmet-async';
 
 function ManageApi() {
     const [hasUserApiKey, setHasUserApiKey] = useState(false);
@@ -23,7 +24,6 @@ function ManageApi() {
                     } else {
                         setHasUserApiKey(false);
                     }
-                    document.title = `URLIX | Manage API`;
                 }
             })
             .catch(err => console.error(err));
@@ -48,6 +48,10 @@ function ManageApi() {
 
     return (
         <div className="container-manage-api">
+            <Helmet>
+                <title>URLIX | Manage API</title>
+                <meta name="description" content="Manage your URLIX API key and view usage statistics." />
+            </Helmet>
 
             {hasUserApiKey ? (
                 <div className="container-api-informations">

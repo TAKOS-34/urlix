@@ -1,11 +1,14 @@
 import React from 'react';
 import '../../styles/Home/Confidentiality.css';
+import { Helmet } from 'react-helmet-async';
 
 function Confidentiality() {
-    document.title = `URLIX | Privacy Policy`;
-
     return (
         <div className="container-confidentiality">
+            <Helmet>
+                <title>URLIX | Privacy Policy</title>
+                <meta name="description" content="URLIX Privacy Policy - Learn how we collect, use, store, and protect your personal data." />
+            </Helmet>
             <div className="confidentiality-title">Privacy Policy</div>
     
             <div className="confidentiality-intro">

@@ -2,12 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import FaqBox from './FaqBox';
 import '../../styles/Home/Faq.css';
+import { Helmet } from 'react-helmet-async';
 
 function Faq() {
-    document.title = 'URLIX | FAQ';
-
     return (
         <div className="container-faq">
+            <Helmet>
+                <title>URLIX | FAQ</title>
+                <meta name="description" content="URLIX FAQ - Frequently Asked Questions about our URL shortener service, account management, and API." />
+            </Helmet>
             <div className="faq-title">FAQ – Frequently Asked Questions</div>
 
             <FaqBox title="1. What is a URL shortener ?">

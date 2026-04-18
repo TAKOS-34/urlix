@@ -6,6 +6,7 @@ import '../../styles/LoginSignUp/AccountForm.css';
 import emailIcon from '../../assets/images/email.png';
 import showIcon from '../../assets/images/show.png';
 import hideIcon from '../../assets/images/hide.png';
+import { Helmet } from 'react-helmet-async';
 
 function SignUp() {
     const { isLoggedIn, loading } = useAuth();
@@ -21,11 +22,9 @@ function SignUp() {
         if (!loading) {
             if (isLoggedIn) {
                 navigate('/');
-            } else {
-                document.title = `URLY | Sign Up`;
             }
         }
-    }, [isLoggedIn]);
+    }, [isLoggedIn, loading, navigate]);
 
     const handleSignUp = (e) => {
         e.preventDefault();
@@ -53,6 +52,10 @@ function SignUp() {
 
     return (
         <div className="container-account-form">
+            <Helmet>
+                <title>URLIX | Sign Up</title>
+                <meta name="description" content="Create a free URLIX account to start shortening URLs and tracking their statistics." />
+            </Helmet>
             <form className="account-form" onSubmit={handleSignUp}>
 
                 <div className="account-form-title">Sign Up</div>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import InformationMessage from '../InformationMessage';
 import '../../styles/Account/ChangeEmail.css';
+import { Helmet } from 'react-helmet-async';
 
 function ChangeEmail() {
     const [newEmail, setNewEmail] = useState('');
@@ -9,7 +10,6 @@ function ChangeEmail() {
     const [newEmailToken, setNewEmailToken] = useState('');
     const [informationMessage, setInformationMessage] = useState({ text: '', color: '' });
     const [informationMessage2, setInformationMessage2] = useState({ text: '', color: '' });
-    document.title = 'URLIX | Change email';
 
     const handleChangeEmailSendEmailTokens = (e) => {
         e.preventDefault();
@@ -49,6 +49,10 @@ function ChangeEmail() {
 
     return (
         <div className="container-change-email">
+            <Helmet>
+                <title>URLIX | Change email</title>
+                <meta name="description" content="Update your account email address on URLIX." />
+            </Helmet>
             <div className="change-email-title">Change email</div>
             <div className="change-email-text">
                 If you want to change your email, click the button below.

@@ -5,13 +5,14 @@ import '../../styles/LoginSignUp/AccountForm.css';
 import emailIcon from '../../assets/images/email.png';
 import subjectIcon from '../../assets/images/subject.png';
 
+import { Helmet } from 'react-helmet-async';
+
 function Contact() {
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
     const [wordCounter, setWordCounter] = useState(0);
     const [informationMessage, setInformationMessage] = useState({ text: '', color: '' });
-    document.title = 'URLIX | Contact';
 
     const handleContactSubmit = (e) => {
         e.preventDefault();
@@ -32,6 +33,10 @@ function Contact() {
 
     return (
         <div className="container-contact-form">
+            <Helmet>
+                <title>URLIX | Contact</title>
+                <meta name="description" content="Contact URLIX - Have questions or feedback? Reach out to us through our contact form." />
+            </Helmet>
             <form onSubmit={handleContactSubmit}>
             <div className="account-contact contact-form">
                 <div className="account-contact-title">Contact</div>

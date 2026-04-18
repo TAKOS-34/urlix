@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../../styles/Account/Information.css';
+import { Helmet } from 'react-helmet-async';
 
 function Information() {
     const [userData, setUserData] = useState([]);
@@ -14,7 +15,6 @@ function Information() {
             .then(res => {
                 if (res.status) {
                     setUserData(res.data);
-                    document.title = `URLIX | Account information`;
                 }
             })
             .catch(err => console.error(err));
@@ -22,6 +22,10 @@ function Information() {
 
     return (
         <div className="informations-container">
+            <Helmet>
+                <title>URLIX | Account information</title>
+                <meta name="description" content="View your URLIX account information, including total URLs created and redirections." />
+            </Helmet>
 
             {
                 (userData.length === 0) ? (

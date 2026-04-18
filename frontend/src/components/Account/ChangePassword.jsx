@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import InformationMessage from '../InformationMessage';
 import '../../styles/Account/ChangePassword.css';
+import { Helmet } from 'react-helmet-async';
 
 function ChangePassword() {
     const [informationMessage, setInformationMessage] = useState({ text: '', color: '' });
-    document.title = 'URLIX | Change password';
 
     const handleChangePassword = () => {
         fetch(`${process.env.REACT_APP_BACKEND_URL}/user/changePassword`, {
@@ -25,6 +25,10 @@ function ChangePassword() {
 
     return (
         <div className="container-change-password">
+            <Helmet>
+                <title>URLIX | Change password</title>
+                <meta name="description" content="Change your URLIX account password." />
+            </Helmet>
             <div className="change-password-title">Change password</div>
             <div className="change-password-text">
                 If you want to change your password, click on the button below.

@@ -9,6 +9,8 @@ import { getByValueExamples } from './Api/getByValueExample';
 import { putExamples } from './Api/putExamples';
 import { deleteExamples } from './Api/deleteExamples';
 
+import { Helmet } from 'react-helmet-async';
+
 function Api() {
     const [selectedPostLanguage, setSelectedPostLanguage] = useState('bash');
     const [selectedGetAllLanguage, setSelectedGetAllLanguage] = useState('bash');
@@ -23,10 +25,13 @@ function Api() {
         { value: 'java', label: 'Java' },
         { value: 'php', label: 'PHP' }
     ];
-    document.title = 'URLIX | API Documentation';
 
     return (
         <div className="container-api">
+            <Helmet>
+                <title>URLIX | API Documentation</title>
+                <meta name="description" content="URLIX API Documentation - Learn how to use our free RESTful API to create, view, modify, or delete your shortened URLs." />
+            </Helmet>
             <div className="container-api-content">
 
                 <div className="api-title">API Documentation</div>

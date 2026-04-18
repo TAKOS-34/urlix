@@ -4,6 +4,7 @@ import InformationMessage from '../../InformationMessage';
 import '../../../styles/Account/ManageUrl/Update.css';
 import showIcon from '../../../assets/images/show.png';
 import hideIcon from '../../../assets/images/hide.png';
+import { Helmet } from 'react-helmet-async';
 
 function UpdateUrl() {
     const navigate = useNavigate();
@@ -28,7 +29,6 @@ function UpdateUrl() {
             .then(res => {
                 if (res.status) {
                     setUrlInfos(res.data);
-                    document.title = `URLIX | Update URL`;
                 } else {
                     navigate('/');
                 }
@@ -80,6 +80,10 @@ function UpdateUrl() {
 
     return (
         <div className="container-update">
+            <Helmet>
+                <title>URLIX | Update URL</title>
+                <meta name="description" content="Update your shortened URL settings, including redirection, slug, and password." />
+            </Helmet>
             {!urlInfos ? (
                 <div></div>
             ) : (

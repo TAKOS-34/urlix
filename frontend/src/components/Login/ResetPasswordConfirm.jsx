@@ -5,8 +5,9 @@ import InformationMessage from '../InformationMessage';
 import '../../styles/LoginSignUp/AccountForm.css';
 import showIcon from '../../assets/images/show.png';
 import hideIcon from '../../assets/images/hide.png';
+import { Helmet } from 'react-helmet-async';
 
-function SignUp() {
+function ResetPasswordConfirm() {
     const { isLoggedIn, loading } = useAuth();
     const { token } = useParams();
     const navigate = useNavigate();
@@ -20,13 +21,11 @@ function SignUp() {
         if (!loading) {
             if (isLoggedIn) {
                 navigate('/');
-            } else {
-                document.title = `URLY | Reset Password`;
             }
         }
-    }, [isLoggedIn]);
+    }, [isLoggedIn, loading, navigate]);
 
-    const handleSignUp = (e) => {
+    const handleResetPasswordConfirm = (e) => {
         e.preventDefault();
         fetch(`${process.env.REACT_APP_BACKEND_URL}/user/resetPasswordConfirm`, {
             method: 'POST',
@@ -51,7 +50,11 @@ function SignUp() {
 
     return (
         <div className="container-account-form">
-            <form className="account-form" onSubmit={handleSignUp}>
+            <Helmet>
+                <title>URLIX | Reset Password</title>
+                <meta name="description" content="Set a new password for your URLIX account." />
+            </Helmet>
+            <form className="account-form" onSubmit={handleResetPasswordConfirm}>
 
                 <div className="account-form-title">Reset your password</div>
 
@@ -91,4 +94,4 @@ function SignUp() {
     );
 }
 
-export default SignUp;
+export default ResetPasswordConfirm;

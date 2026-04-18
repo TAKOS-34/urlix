@@ -8,6 +8,7 @@ import statsInfosIcon from '../../assets/images/stats-infos.png';
 import editIcon from '../../assets/images/edit.png';
 import deleteIcon from '../../assets/images/cross-black.png';
 import searchIcon from '../../assets/images/search.png';
+import { Helmet } from 'react-helmet-async';
 
 function ManageURL() {
     const [urlList, setUrlList] = useState([]);
@@ -27,7 +28,6 @@ function ManageURL() {
                 if (res.status) {
                     setUrlList(res.data);
                     setFilteredUrlList(res.data);
-                    document.title = `URLIX | Manage URL`;
                 }
             })
             .catch(err => console.error(err));
@@ -88,6 +88,10 @@ function ManageURL() {
 
     return (
         <div className="container-manage-url">
+            <Helmet>
+                <title>URLIX | Manage URL</title>
+                <meta name="description" content="Manage your shortened URLs, view statistics, and update or delete your links." />
+            </Helmet>
 
             <div className="container-search-filter">
                 <div className="input-search">

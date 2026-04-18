@@ -4,6 +4,7 @@ import { useAuth } from '../AuthProvider';
 import { useParams } from 'react-router-dom';
 import InformationMessage from '../InformationMessage';
 import '../../styles/LoginSignUp/ConfirmSignUp.css';
+import { Helmet } from 'react-helmet-async';
 
 function ConfirmSignUp() {
     const { isLoggedIn } = useAuth();
@@ -15,7 +16,6 @@ function ConfirmSignUp() {
         if (isLoggedIn) {
             navigate('/');
         } else {
-            document.title = `URLY | Confirm Sign Up`;
             fetch(`${process.env.REACT_APP_BACKEND_URL}/user/confirmSignUp`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -34,6 +34,10 @@ function ConfirmSignUp() {
 
     return (
         <div className="container-confirm-sign-up">
+            <Helmet>
+                <title>URLIX | Confirm Sign Up</title>
+                <meta name="description" content="Confirm your email address to activate your URLIX account." />
+            </Helmet>
             <div className="container-information-message">
                 {informationMessage.text && <InformationMessage message={{ text: informationMessage.text, color: informationMessage.color }} />}
             </div>

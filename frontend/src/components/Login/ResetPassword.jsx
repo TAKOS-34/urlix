@@ -4,6 +4,7 @@ import { useAuth } from '../AuthProvider';
 import InformationMessage from '../InformationMessage';
 import '../../styles/LoginSignUp/AccountForm.css';
 import emailIcon from '../../assets/images/email.png';
+import { Helmet } from 'react-helmet-async';
 
 function ResetPassword() {
     const { isLoggedIn, loading } = useAuth();
@@ -15,11 +16,9 @@ function ResetPassword() {
         if (!loading) {
             if (isLoggedIn) {
                 navigate('/');
-            } else {
-                document.title = `URLY | Reset Password`;
             }
         }
-    }, [isLoggedIn]);
+    }, [isLoggedIn, loading, navigate]);
 
     const handleForgotPassword = (e) => {
         e.preventDefault();
@@ -38,6 +37,10 @@ function ResetPassword() {
 
     return (
         <div className="container-account-form">
+            <Helmet>
+                <title>URLIX | Reset Password</title>
+                <meta name="description" content="Reset your URLIX account password if you've forgotten it." />
+            </Helmet>
             <form className="account-form" onSubmit={handleForgotPassword}>
 
                 <div className="account-form-title">Forgot Your Password</div>

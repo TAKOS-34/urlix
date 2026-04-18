@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useParams, useNavigate } from "react-router-dom";
 import InformationMessage from '../../InformationMessage';
 import '../../../styles/Account/ManageUrl/Delete.css';
+import { Helmet } from 'react-helmet-async';
 
 function DeleteUrl() {
     const navigate = useNavigate();
@@ -19,7 +20,6 @@ function DeleteUrl() {
             .then(res => {
                 if (res.status) {
                     setUrlInfos(res.data);
-                    document.title = `URLIX | Delete URL`;
                 } else {
                     navigate('/');
                 }
@@ -50,6 +50,10 @@ function DeleteUrl() {
 
     return (
         <div className="container-delete">
+            <Helmet>
+                <title>URLIX | Delete URL</title>
+                <meta name="description" content="Confirm deletion of your shortened URL." />
+            </Helmet>
             {!urlInfos ? (
                 <div></div>
             ) : (

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { QRCodeSVG } from "qrcode.react";
 import '../../../styles/Account/ManageUrl/Qrcode.css';
+import { Helmet } from 'react-helmet-async';
 
 function Qrcode() {
     const navigate = useNavigate();
@@ -18,7 +19,6 @@ function Qrcode() {
             .then(res => {
                 if (res.status) {
                     setUrlInfos(res.data);
-                    document.title = `URLIX | Qr Code Generator`;
                 } else {
                     navigate('/');
                 }
@@ -49,6 +49,10 @@ function Qrcode() {
 
     return (
         <div className="container-qrcode">
+            <Helmet>
+                <title>URLIX | Qr Code Generator</title>
+                <meta name="description" content="Generate and download a QR code for your shortened URL." />
+            </Helmet>
             {!urlInfos ? (
                 <div></div>
             ) : (

@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import InformationMessage from '../InformationMessage';
 import '../../styles/Account/DeleteAccount.css';
+import { Helmet } from 'react-helmet-async';
 
 function DeleteAccount() {
     const [informationMessage, setInformationMessage] = useState({ text: '', color: '' });
-    document.title = 'URLIX | Delete your account';
 
     const handleDeleteAccount = () => {
         if (window.confirm('Are you sure you want to delete your account ? This action is irreversible !')) {
@@ -27,6 +27,10 @@ function DeleteAccount() {
 
     return (
         <div className="container-delete-account">
+            <Helmet>
+                <title>URLIX | Delete your account</title>
+                <meta name="description" content="Delete your URLIX account permanently." />
+            </Helmet>
             <div className="delete-account-title">Delete your account</div>
             <div className="delete-account-text">
                 If you want to delete your account, click on the button below.

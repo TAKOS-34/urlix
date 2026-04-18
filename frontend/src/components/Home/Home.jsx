@@ -1,12 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../styles/Home/Home.css';
+import { Helmet } from 'react-helmet-async';
 
 function Home() {
-    document.title = 'URLIX | Home';
-
     return (
         <div className="container-home">
+            <Helmet>
+                <title>URLIX | Home</title>
+                <meta name="description" content="URLIX - Your free and unlimited URL shortener service. Easily shorten long URLs into compact, shareable links and track redirection statistics." />
+            </Helmet>
             <div className="home-header-title">Welcome to URLIX</div>
             <div className="home-header-content">
                 Your free and unlimited URL shortener service. Easily shorten long URLs into compact, shareable links and track redirection statistics — all in one place
