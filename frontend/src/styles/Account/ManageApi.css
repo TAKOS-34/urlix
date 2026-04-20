@@ -106,10 +106,6 @@
 }
 
 @media (max-width: 600px) {
-    .container-manage-api {
-        padding: var(--space-4);
-    }
-
     .api-informations-list li {
         flex-direction: column;
         gap: var(--space-1);

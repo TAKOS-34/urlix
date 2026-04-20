@@ -15,7 +15,7 @@ const Statistics = ({ data }) => {
                 {
                     label: 'Redirections per day',
                     data: redirectionCounts,
-                    borderColor: 'rgbrgb(255, 255, 255)',
+                    borderColor: 'rgb(255, 255, 255)',
                     backgroundColor: 'rgb(255, 255, 255)',
                     pointBackgroundColor: '#f9fafb',
                     pointBorderColor: '#f9fafb',

@@ -115,3 +115,9 @@
         display: none;
     }
 }
+
+@media (max-width: 600px) {
+    .container-menu {
+        padding: var(--space-4);
+    }
+}

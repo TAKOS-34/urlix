@@ -12,6 +12,7 @@
     border: var(--border-width) solid var(--border-color);
     border-radius: var(--border-radius-lg);
     padding: var(--space-4) var(--space-6);
+    margin: var(--space-4) 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -171,6 +172,7 @@
 .area-redirection .lower img {
     height: 18px;
     filter: invert(1);
+    margin-right: var(--space-1);
 }
 
 .area-redirection .lower {
@@ -207,10 +209,6 @@
 }
 
 @media (max-width: 768px) {
-    .container-manage-url {
-        padding: var(--space-4);
-    }
-
     .container-search-filter {
         flex-direction: column;
         align-items: center;
@@ -245,5 +243,6 @@
 
     .area-redirection .lower img {
         height: 12px;
+        margin-right: 2px;
     }
 }
